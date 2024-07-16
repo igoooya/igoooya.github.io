@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+#game {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+#player {
+  color: green;
+}
+
+#computer {
+  color: red;
+}
+
+button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+#player, #computer {
+  margin-bottom: 20px;
+}
+
+#score-table {
+  margin: 20px 0;
+}
+#score-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#score-table th, #score-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+#score-table th {
+  background-color: #f9f9f9;
+}
+
+#player-score-table th, #player-score-table td {
+  color: green;
+}
+
+#computer-score-table th, #computer-score-table td {
+  color: red;
+}
+
+.message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  display: none;
+  z-index: 1000;
+}
+.message.show {
+  display: block;
+}
+
+#button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

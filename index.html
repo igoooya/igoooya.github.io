@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Dice Game</h1>
+    <h2>By Goya Choi</h2>
+    <div id="game">
+        <div id="player">
+            <h3>Player</h3>
+            <img src="images/d1.svg" alt="Dice" id="player-die1">
+            <img src="images/d2.svg" alt="Dice" id="player-die2">
+        </div>
+        <div id="score-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Round</th>
+                        <th>Player Score</th>
+                        <th>Computer Score</th>
+                    </tr>
+                </thead>
+                <tbody id="score-body">
+                    <!-- Scores will be dynamically added here -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Total</th>
+                        <th id="player-total-score">0</th>
+                        <th id="computer-total-score">0</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div id="computer">
+            <h3>Computer</h3>
+            <img src="images/d1.svg" alt="Dice" id="computer-die1">
+            <img src="images/d2.svg" alt="Dice" id="computer-die2">
+        </div>
+        <div id="button-container">
+            <button id="roll-button">Roll Dice</button>
+            <button id="reset-button">Reset Game</button>
+        </div>
+    </div>
+    <div id="reset-message" class="message">Starting a New Game...</div>
+    <div id="game-over-message" class="message">Game Over! The winner is <span id="winner"></span></div>
+    <script src="js/script.js"></script>
+</body>
+</html>

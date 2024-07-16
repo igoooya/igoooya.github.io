@@ -1,0 +1,130 @@
+// Variables
+$primary-color: #007bff;
+$secondary-color: #0056b3;
+$background-color: #f0f0f0;
+$text-color: #333;
+$border-color: #ccc;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-style {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: $primary-color;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: $background-color;
+}
+
+#game {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid $border-color;
+  background-color: #fff;
+  width: 600px;
+  @include flex-center;
+  flex-direction: column;
+}
+
+h1, h2 {
+  color: $text-color;
+}
+
+#player {
+  color: green;
+}
+
+#computer {
+  color: red;
+}
+
+button {
+  @include button-style;
+}
+
+#player, #computer {
+  margin-bottom: 20px;
+}
+
+#score-table {
+  margin: 20px 0;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid $border-color;
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f9f9f9;
+  }
+}
+
+#player-score-table {
+  th, td {
+    color: green;
+  }
+}
+
+#computer-score-table {
+  th, td {
+    color: red;
+  }
+}
+
+.message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  display: none;
+  z-index: 1000;
+
+  &.show {
+    display: block;
+  }
+}
+
+#button-container {
+  @include flex-center;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
